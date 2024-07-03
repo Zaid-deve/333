@@ -1,5 +1,6 @@
 .container-fluid{
     background: rgba(0, 0, 0, 1) !important;
+    overflow: auto;
 }
 
 .form-container {
@@ -10,4 +11,8 @@
 
 .form-control {
     width: 100%;
+}
+
+.form-control:read-only{
+    background: #d4d4d4 !important;
 }
