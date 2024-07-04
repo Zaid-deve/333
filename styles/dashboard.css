@@ -1,0 +1,45 @@
+main{
+    padding-top: 90px;
+}
+
+.left-pannel{
+    border-right: 1px solid #7e7e7e;
+}
+.pannel-options li{
+    cursor: pointer;
+    font-weight: 500;
+}
+.pannel-options li:hover{
+    background: #f5f5f5;
+}
+
+.pannel-options li.active{
+    background: #eee;
+}
+
+.pannel-options li i{
+    font-size: 1.2rem;
+}
+
+.pannel-options li a{
+    text-decoration: none;
+    color: #000;
+}
+
+.redi-btn{
+    /* text-decoration: none; */
+    color: #eee;
+}
+
+@media (max-width:768px) {
+    .left-pannel{
+        display: none;
+    }
+    .left-pannel.show{
+        display: block;
+    }
+
+    .left-pannel.show + .col{
+        display: none;
+    }
+}
