@@ -1,5 +1,7 @@
 <?php
 
+use Fpdf\Fpdf;
+
 session_start();
 if (!isset($_SESSION['user_id'])) {
     header("Location: login.php?r=apply");
@@ -11,7 +13,7 @@ $uid = $_SESSION['user_id'];
 try {
 
     require_once "../php/config.php";
-    require_once "../tcpdf/vendor/autoload.php";
+    require_once "../fpdf/vendor/autoload.php";
 
     // Validate form data
     $required_fields = [
@@ -33,7 +35,7 @@ try {
     $ni = $_POST['ni'];
 
     // Create new PDF document
-    $pdf = new TCPDF();
+    $pdf = new Fpdf();
     $pdf->AddPage();
 
     // Set title
