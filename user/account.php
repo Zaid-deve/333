@@ -61,7 +61,7 @@ include "../includes/head.php";
 
                 ?>
                 <div class="d-flex gap-2">
-                    <a href="logout.php" class="btn btn-secondary w-50">Logout</a>
+                    <a href="../logout.php" class="btn btn-secondary w-50">Logout</a>
                     <a href="apply.php" class="btn btn-primary w-50">Apply As Driver</a>
                 </div>
                 <form action="<?php echo "account.php" ?>" method="POST" enctype="multipart/form-data" class="mt-4">

@@ -25,7 +25,7 @@ include "../includes/head.php";
     <main class="vh-100">
         <div class="container-fluid h-100 py-3">
             <div class="row h-100 py-3">
-                <div class="col-lg-4 col-md-5 left-pannel <?php if(!isset($_GET['m'])) echo 'show' ?>">
+                <div class="col-lg-4 col-md-5 left-pannel <?php if (!isset($_GET['m'])) echo 'show' ?>">
                     <ul class="list-group">
                         <ul class="list-group pannel-options">
                             <li class="list-group-item border-0 active">
@@ -43,13 +43,14 @@ include "../includes/head.php";
                         $mod = $_GET['m'];
 
                         echo "<script>
-                           if('$mod'=='applications'){
-                           document.querySelector('.pannel-options').firstElementChild.classList.remove('active')
-                           document.querySelector('.pannel-options').lastElementChild.classList.add('active')
-                           } else {
-                           document.querySelector('.pannel-options').firstElementChild.classList.add('active')
-                           }
-                        </script>";
+                                const pannel = document.querySelector('.pannel-options')
+                                if('$mod'=='applications'){
+                                     pannel.firstElementChild.classList.remove('active')
+                                     pannel.lastElementChild.classList.add('active')
+                                } else {
+                                     pannel.firstElementChild.classList.add('active')
+                                }
+                             </script>";
                         if ($mod === 'applications') {
                             require_once "applications.php";
                         } else {
@@ -57,9 +58,9 @@ include "../includes/head.php";
                         }
                     } else {
                         echo "<div class='text-center py-5'>
-                               nothing to show at a moment
+                                nothing to show at a movement
                               </div>";
-                    }?>
+                    } ?>
                 </div>
             </div>
         </div>

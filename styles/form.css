@@ -13,6 +13,17 @@
     width: 100%;
 }
 
+.form-outer{
+    overflow: auto;
+}
 .form-control:read-only{
     background: #d4d4d4 !important;
+}
+
+.form-outer .form-container{
+    max-width: none;
+}
+
+.form-outer .form-control{
+    margin-top: 6px;
 }

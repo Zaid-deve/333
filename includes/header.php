@@ -11,14 +11,16 @@
             <a class="nav-link active" aria-current="page" href="#">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">About</a>
+            <a class="nav-link" href="about.php">About</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Contact</a>
+            <a class="nav-link" href="contact.php">Contact</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Driver</a>
-          </li>
+          <?php if (isset($_SESSION['user_id'])) { ?>
+            <li class="nav-item">
+              <a class="nav-link" href="user/apply.php">Driver</a>
+            </li>
+          <?php } ?>
         </ul>
       </div>
     </div>
